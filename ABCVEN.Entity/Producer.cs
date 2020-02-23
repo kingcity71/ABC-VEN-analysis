@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ABCVEN.Entities
+namespace ABCVEN.Entity
 {
     public class Producer
     {
