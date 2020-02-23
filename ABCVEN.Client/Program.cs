@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ABCVEN.Interfaces;
+using Ninject;
+using Ninject.Modules;
+
 
 namespace ABCVEN
 {
@@ -16,7 +20,11 @@ namespace ABCVEN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            var registrations = new NinjectRegistrations();
+            var kernel = new StandardKernel(registrations);
+            var dep = kernel.Get<IFileUploadService>();
+            Application.Run(new Form1(dep));
         }
     }
 }

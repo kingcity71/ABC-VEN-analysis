@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCVEN.Entity", "ABCVEN.Ent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{151B17F9-0C85-432F-83AF-EF05965646DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCVEN.BLL", "ABCVEN.BLL\ABCVEN.BLL.csproj", "{8FCDA464-2E3D-421B-B591-CF902ADFCF33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCVEN.Interfaces", "ABCVEN.Interfaces\ABCVEN.Interfaces.csproj", "{E366E334-FF5E-496D-819F-6AE0A14B0F0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{151B17F9-0C85-432F-83AF-EF05965646DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{151B17F9-0C85-432F-83AF-EF05965646DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{151B17F9-0C85-432F-83AF-EF05965646DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCDA464-2E3D-421B-B591-CF902ADFCF33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCDA464-2E3D-421B-B591-CF902ADFCF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCDA464-2E3D-421B-B591-CF902ADFCF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCDA464-2E3D-421B-B591-CF902ADFCF33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E366E334-FF5E-496D-819F-6AE0A14B0F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E366E334-FF5E-496D-819F-6AE0A14B0F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E366E334-FF5E-496D-819F-6AE0A14B0F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E366E334-FF5E-496D-819F-6AE0A14B0F0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

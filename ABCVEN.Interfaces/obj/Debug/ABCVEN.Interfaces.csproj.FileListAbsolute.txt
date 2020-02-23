@@ -1,0 +1,5 @@
+D:\repos\ABC-VEN analysis\ABCVEN.Interfaces\bin\Debug\ABCVEN.Interfaces.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Interfaces\bin\Debug\ABCVEN.Interfaces.pdb
+D:\repos\ABC-VEN analysis\ABCVEN.Interfaces\obj\Debug\ABCVEN.Interfaces.csprojAssemblyReference.cache
+D:\repos\ABC-VEN analysis\ABCVEN.Interfaces\obj\Debug\ABCVEN.Interfaces.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Interfaces\obj\Debug\ABCVEN.Interfaces.pdb
