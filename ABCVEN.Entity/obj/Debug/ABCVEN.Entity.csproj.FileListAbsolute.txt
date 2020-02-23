@@ -1,0 +1,5 @@
+D:\repos\ABC-VEN analysis\ABCVEN.Entity\bin\Debug\ABCVEN.Entities.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Entity\bin\Debug\ABCVEN.Entities.pdb
+D:\repos\ABC-VEN analysis\ABCVEN.Entity\obj\Debug\ABCVEN.Entity.csprojAssemblyReference.cache
+D:\repos\ABC-VEN analysis\ABCVEN.Entity\obj\Debug\ABCVEN.Entities.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Entity\obj\Debug\ABCVEN.Entities.pdb

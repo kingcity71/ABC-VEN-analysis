@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCVEN.Data", "ABCVEN.Data\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCVEN.Client", "ABCVEN.Client\ABCVEN.Client.csproj", "{4EC7BE5D-1FFA-4E32-85CF-A686BA727FEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCVEN.Entity", "ABCVEN.Entity\ABCVEN.Entity.csproj", "{2AEFB4A2-F26F-4CF5-9D3C-34FD53EBC5BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{151B17F9-0C85-432F-83AF-EF05965646DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{4EC7BE5D-1FFA-4E32-85CF-A686BA727FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EC7BE5D-1FFA-4E32-85CF-A686BA727FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EC7BE5D-1FFA-4E32-85CF-A686BA727FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AEFB4A2-F26F-4CF5-9D3C-34FD53EBC5BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AEFB4A2-F26F-4CF5-9D3C-34FD53EBC5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AEFB4A2-F26F-4CF5-9D3C-34FD53EBC5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AEFB4A2-F26F-4CF5-9D3C-34FD53EBC5BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{151B17F9-0C85-432F-83AF-EF05965646DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{151B17F9-0C85-432F-83AF-EF05965646DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{151B17F9-0C85-432F-83AF-EF05965646DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{151B17F9-0C85-432F-83AF-EF05965646DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

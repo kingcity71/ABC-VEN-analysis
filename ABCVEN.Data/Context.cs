@@ -1,5 +1,4 @@
-﻿using ABCVEN.Entities;
-using ABCVEN.Entity;
+﻿using ABCVEN.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -12,7 +11,7 @@ namespace ABCVEN.Data
 {
     public class ABCVENContext:DbContext
     {
-        public ABCVENContext()
+        public ABCVENContext() { }
         public DbSet<Medicine> Medicines { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Store> Stores { get; set; }
