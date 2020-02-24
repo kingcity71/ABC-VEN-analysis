@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.PurchasesUploadBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateFromDP = new System.Windows.Forms.DateTimePicker();
@@ -52,17 +56,17 @@
             this.CCheckBox = new System.Windows.Forms.CheckBox();
             this.BCheckBox = new System.Windows.Forms.CheckBox();
             this.ACheckBox = new System.Windows.Forms.CheckBox();
-            this.MNNCheckBox = new System.Windows.Forms.CheckBox();
-            this.TNCheckBox = new System.Windows.Forms.CheckBox();
             this.SalesUploadBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.FilterBtn = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -78,16 +82,6 @@
             this.PurchasesUploadBtn.Text = "Загрузить поставки";
             this.PurchasesUploadBtn.UseVisualStyleBackColor = true;
             this.PurchasesUploadBtn.Click += new System.EventHandler(this.PurchasesUploadBtn_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(580, 227);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -200,18 +194,16 @@
             this.groupBox1.Controls.Add(this.CCheckBox);
             this.groupBox1.Controls.Add(this.BCheckBox);
             this.groupBox1.Controls.Add(this.ACheckBox);
-            this.groupBox1.Controls.Add(this.MNNCheckBox);
-            this.groupBox1.Controls.Add(this.TNCheckBox);
             this.groupBox1.Location = new System.Drawing.Point(506, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(311, 156);
+            this.groupBox1.Size = new System.Drawing.Size(436, 97);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ABC-VEN анализ";
             // 
             // showDiagramm
             // 
-            this.showDiagramm.Location = new System.Drawing.Point(230, 87);
+            this.showDiagramm.Location = new System.Drawing.Point(332, 19);
             this.showDiagramm.Name = "showDiagramm";
             this.showDiagramm.Size = new System.Drawing.Size(75, 23);
             this.showDiagramm.TabIndex = 9;
@@ -221,7 +213,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 92);
+            this.label3.Location = new System.Drawing.Point(11, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 13);
             this.label3.TabIndex = 8;
@@ -230,7 +222,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(274, 121);
+            this.checkBox1.Location = new System.Drawing.Point(376, 53);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(34, 17);
             this.checkBox1.TabIndex = 7;
@@ -240,7 +232,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(230, 121);
+            this.checkBox2.Location = new System.Drawing.Point(332, 53);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(33, 17);
             this.checkBox2.TabIndex = 6;
@@ -250,7 +242,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(187, 121);
+            this.checkBox3.Location = new System.Drawing.Point(289, 53);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(33, 17);
             this.checkBox3.TabIndex = 5;
@@ -260,7 +252,7 @@
             // CCheckBox
             // 
             this.CCheckBox.AutoSize = true;
-            this.CCheckBox.Location = new System.Drawing.Point(99, 121);
+            this.CCheckBox.Location = new System.Drawing.Point(99, 55);
             this.CCheckBox.Name = "CCheckBox";
             this.CCheckBox.Size = new System.Drawing.Size(33, 17);
             this.CCheckBox.TabIndex = 4;
@@ -270,7 +262,7 @@
             // BCheckBox
             // 
             this.BCheckBox.AutoSize = true;
-            this.BCheckBox.Location = new System.Drawing.Point(55, 121);
+            this.BCheckBox.Location = new System.Drawing.Point(55, 55);
             this.BCheckBox.Name = "BCheckBox";
             this.BCheckBox.Size = new System.Drawing.Size(33, 17);
             this.BCheckBox.TabIndex = 3;
@@ -280,34 +272,12 @@
             // ACheckBox
             // 
             this.ACheckBox.AutoSize = true;
-            this.ACheckBox.Location = new System.Drawing.Point(12, 121);
+            this.ACheckBox.Location = new System.Drawing.Point(12, 55);
             this.ACheckBox.Name = "ACheckBox";
             this.ACheckBox.Size = new System.Drawing.Size(33, 17);
             this.ACheckBox.TabIndex = 2;
             this.ACheckBox.Text = "A";
             this.ACheckBox.UseVisualStyleBackColor = true;
-            // 
-            // MNNCheckBox
-            // 
-            this.MNNCheckBox.AutoSize = true;
-            this.MNNCheckBox.Location = new System.Drawing.Point(76, 21);
-            this.MNNCheckBox.Name = "MNNCheckBox";
-            this.MNNCheckBox.Size = new System.Drawing.Size(51, 17);
-            this.MNNCheckBox.TabIndex = 1;
-            this.MNNCheckBox.Text = "МНН";
-            this.MNNCheckBox.UseVisualStyleBackColor = true;
-            this.MNNCheckBox.Visible = false;
-            // 
-            // TNCheckBox
-            // 
-            this.TNCheckBox.AutoSize = true;
-            this.TNCheckBox.Location = new System.Drawing.Point(7, 20);
-            this.TNCheckBox.Name = "TNCheckBox";
-            this.TNCheckBox.Size = new System.Drawing.Size(41, 17);
-            this.TNCheckBox.TabIndex = 0;
-            this.TNCheckBox.Text = "ТН";
-            this.TNCheckBox.UseVisualStyleBackColor = true;
-            this.TNCheckBox.Visible = false;
             // 
             // SalesUploadBtn
             // 
@@ -371,14 +341,46 @@
             this.FilterBtn.UseVisualStyleBackColor = true;
             this.FilterBtn.Click += new System.EventHandler(this.FilterBtn_Click);
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(508, 120);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Green,
+        System.Drawing.Color.Yellow,
+        System.Drawing.Color.Red};
+            series1.ChartArea = "ChartArea1";
+            series1.LabelForeColor = System.Drawing.Color.Green;
+            series1.Legend = "Legend1";
+            series1.Name = "V";
+            series2.ChartArea = "ChartArea1";
+            series2.LabelForeColor = System.Drawing.Color.Yellow;
+            series2.Legend = "Legend1";
+            series2.Name = "E";
+            series3.ChartArea = "ChartArea1";
+            series3.LabelForeColor = System.Drawing.Color.Red;
+            series3.Legend = "Legend1";
+            series3.Name = "N";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(434, 303);
+            this.chart1.TabIndex = 21;
+            this.chart1.Text = "chart1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 505);
+            this.ClientSize = new System.Drawing.Size(954, 505);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
             this.Name = "Form1";
@@ -390,6 +392,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,7 +401,6 @@
 
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button PurchasesUploadBtn;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateFromDP;
@@ -418,8 +420,6 @@
         private System.Windows.Forms.CheckBox CCheckBox;
         private System.Windows.Forms.CheckBox BCheckBox;
         private System.Windows.Forms.CheckBox ACheckBox;
-        private System.Windows.Forms.CheckBox MNNCheckBox;
-        private System.Windows.Forms.CheckBox TNCheckBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button showDiagramm;
         private System.Windows.Forms.Button SalesUploadBtn;
@@ -427,6 +427,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button FilterBtn;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

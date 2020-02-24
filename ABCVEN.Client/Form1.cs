@@ -33,6 +33,21 @@ namespace ABCVEN
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            chart1.Series["V"].Points.AddXY("A", "10");
+            chart1.Series["V"].Points.AddXY("B", "30");
+            chart1.Series["V"].Points.AddXY("C", "60");
+            chart1.Series["V"].Points.AddXY("Всего", "30");
+
+            chart1.Series["E"].Points.AddXY("A", "20");
+            chart1.Series["E"].Points.AddXY("B", "60");
+            chart1.Series["E"].Points.AddXY("C", "20");
+            chart1.Series["E"].Points.AddXY("Всего", "50");
+
+            chart1.Series["N"].Points.AddXY("A", "70");
+            chart1.Series["N"].Points.AddXY("B", "10");
+            chart1.Series["N"].Points.AddXY("C", "20");
+            chart1.Series["N"].Points.AddXY("Всего", "20");
+
             SetInitialValues();
         }
         private void SetDataGridView(List<object> list)
