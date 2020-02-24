@@ -1,9 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-//using Excel = Microsoft.Office.Interop.Excel;
 using ABCVEN.Interfaces;
-//using Microsoft.Office.Interop.Excel;
+using ABCVEN.Models;
 using System.Linq;
 using System.Collections.Generic;
 
@@ -14,12 +13,15 @@ namespace ABCVEN
         private readonly IFileUploadService fileUploadService;
         private readonly ICrudService crudService;
         private readonly ICalculationService calculationService;
+        private readonly IViewService viewService;
 
-        public Form1(IFileUploadService fileUploadService, ICrudService crudService, ICalculationService calculationService)
+        public Form1(IFileUploadService fileUploadService, ICrudService crudService,
+            ICalculationService calculationService, IViewService viewService)
         {
             this.fileUploadService = fileUploadService;
             this.crudService = crudService;
             this.calculationService = calculationService;
+            this.viewService = viewService;
             InitializeComponent();
 
         }
@@ -27,7 +29,7 @@ namespace ABCVEN
         {
             SetComboBoxes();
 
-            var viewList = calculationService.GetSalesViewModels().Select(x => (object)x).ToList();
+            var viewList = viewService.GetSalesViewModels().Select(x => (object)x).ToList();
             SetDataGridView(viewList);
         }
         private void Form1_Load(object sender, EventArgs e)

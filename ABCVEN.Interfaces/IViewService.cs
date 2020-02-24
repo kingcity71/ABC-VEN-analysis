@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ABCVEN.Interfaces
 {
-    public interface ICalculationService
+    public interface IViewService
     {
-        
+        IEnumerable<SalesViewModel> GetSalesViewModels();
     }
 }

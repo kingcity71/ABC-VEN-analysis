@@ -33,7 +33,7 @@ namespace ABCVEN
             container.Register<IFileUploadService, FileUploadService>(Lifestyle.Scoped);
             container.Register<ICrudService, CrudService>(Lifestyle.Scoped);
             container.Register<ICalculationService, CalculationService>(Lifestyle.Scoped);
-            container.Register<SalesViewModel>(Lifestyle.Scoped);
+            container.Register<IViewService, ViewService>(Lifestyle.Scoped);
             container.Register<Form1>(Lifestyle.Scoped);
 
             container.Verify();

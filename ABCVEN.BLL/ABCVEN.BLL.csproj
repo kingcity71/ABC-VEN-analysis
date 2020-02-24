@@ -59,6 +59,7 @@
     <Compile Include="CrudService.cs" />
     <Compile Include="FileUploadService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ABCVEN.Data\ABCVEN.Data.csproj">

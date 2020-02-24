@@ -17,23 +17,6 @@ namespace ABCVEN.BLL
         {
             this.context = context;
         }
-        public IEnumerable<SalesViewModel> GetSalesViewModels()
-        {
-            var result = new List<SalesViewModel>();
-            var sales = context.Sales.ToList();
-            foreach(var medicine in context.Medicines)
-            {
-                var medicineSales = sales.Where(x => x.MedicineId == medicine.Id).ToList();
-                var count = medicineSales.Sum(x => x.Count);
-                var sum = medicineSales.Sum(x => x.Sum);
-                result.Add(new SalesViewModel()
-                {
-                    MedicineName = medicine.TradeName,
-                    SalesCount = count,
-                    SalesSum = sum
-                });
-            }
-            return result;
-        }
+        
     }
 }
