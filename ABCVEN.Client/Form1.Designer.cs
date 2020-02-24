@@ -228,6 +228,7 @@
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "N";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Checked = true;
             // 
             // checkBox2
             // 
@@ -238,6 +239,7 @@
             this.checkBox2.TabIndex = 6;
             this.checkBox2.Text = "E";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Checked = true;
             // 
             // checkBox3
             // 
@@ -248,6 +250,7 @@
             this.checkBox3.TabIndex = 5;
             this.checkBox3.Text = "V";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.Checked = true;
             // 
             // CCheckBox
             // 
@@ -258,6 +261,7 @@
             this.CCheckBox.TabIndex = 4;
             this.CCheckBox.Text = "C";
             this.CCheckBox.UseVisualStyleBackColor = true;
+            this.CCheckBox.Checked = true;
             // 
             // BCheckBox
             // 
@@ -268,6 +272,7 @@
             this.BCheckBox.TabIndex = 3;
             this.BCheckBox.Text = "B";
             this.BCheckBox.UseVisualStyleBackColor = true;
+            this.BCheckBox.Checked = true;
             // 
             // ACheckBox
             // 
@@ -278,6 +283,7 @@
             this.ACheckBox.TabIndex = 2;
             this.ACheckBox.Text = "A";
             this.ACheckBox.UseVisualStyleBackColor = true;
+            this.ACheckBox.Checked = true;
             // 
             // SalesUploadBtn
             // 
@@ -369,7 +375,7 @@
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
             this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(434, 303);
+            this.chart1.Size = new System.Drawing.Size(434, 339);
             this.chart1.TabIndex = 21;
             this.chart1.Text = "chart1";
             // 

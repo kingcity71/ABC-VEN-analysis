@@ -33,21 +33,8 @@ namespace ABCVEN
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            chart1.Series["V"].Points.AddXY("A", "10");
-            chart1.Series["V"].Points.AddXY("B", "30");
-            chart1.Series["V"].Points.AddXY("C", "60");
-            chart1.Series["V"].Points.AddXY("Всего", "30");
-
-            chart1.Series["E"].Points.AddXY("A", "20");
-            chart1.Series["E"].Points.AddXY("B", "60");
-            chart1.Series["E"].Points.AddXY("C", "20");
-            chart1.Series["E"].Points.AddXY("Всего", "50");
-
-            chart1.Series["N"].Points.AddXY("A", "70");
-            chart1.Series["N"].Points.AddXY("B", "10");
-            chart1.Series["N"].Points.AddXY("C", "20");
-            chart1.Series["N"].Points.AddXY("Всего", "20");
-
+            var diaMod = viewService.GetDiagrammModel(null);
+            SetDiagrammData(diaMod);
             SetInitialValues();
         }
         private void SetDataGridView(List<object> list)
@@ -75,6 +62,23 @@ namespace ABCVEN
             var borders = viewService.GetTimeBorders();
             dateFromDP.Value = borders.Item1;
             dateToDP.Value = borders.Item2;
+        }
+        private void SetDiagrammData(DiagrammViewModel diaMod)
+        {
+            chart1.Series["V"].Points.AddXY("A", diaMod.A.V);
+            chart1.Series["V"].Points.AddXY("B", diaMod.B.V);
+            chart1.Series["V"].Points.AddXY("C", diaMod.C.V);
+            chart1.Series["V"].Points.AddXY("Всего", diaMod.Total.V);
+
+            chart1.Series["E"].Points.AddXY("A", diaMod.A.E);
+            chart1.Series["E"].Points.AddXY("B", diaMod.B.E);
+            chart1.Series["E"].Points.AddXY("C", diaMod.C.E);
+            chart1.Series["E"].Points.AddXY("Всего", diaMod.Total.E);
+
+            chart1.Series["N"].Points.AddXY("A", diaMod.A.N);
+            chart1.Series["N"].Points.AddXY("B", diaMod.B.N);
+            chart1.Series["N"].Points.AddXY("C", diaMod.C.N);
+            chart1.Series["N"].Points.AddXY("Всего", diaMod.Total.N);
         }
         private void PurchasesUploadBtn_Click(object sender, EventArgs e)
         {
@@ -113,6 +117,9 @@ namespace ABCVEN
             var viewModels = viewService.GetFilteredViewModel(filterModel).Select(x => (object)x).ToList();
             SetDataGridView(viewModels);
         }
+
+        
+
     }
 
 }
