@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Data;
+
 using System.ComponentModel;
 using System.Windows.Forms;
-using Excel = Microsoft.Office.Interop.Excel;
+//using Excel = Microsoft.Office.Interop.Excel;
 using ABCVEN.Interfaces;
-using Microsoft.Office.Interop.Excel;
+//using Microsoft.Office.Interop.Excel;
 using System.Linq;
 using System.Collections.Generic;
 
@@ -19,7 +21,7 @@ namespace ABCVEN
             this.fileUploadService = fileUploadService;
             this.crudService = crudService;
             InitializeComponent();
-            SetInitialValues();
+            
         }
         private void SetInitialValues()
         {
@@ -34,14 +36,20 @@ namespace ABCVEN
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            SetInitialValues();
+            //SetDataGridView(list);
+            
         }
-
+        private void SetDataGridView(List<object> list)
+        {
+            var binder = new BindingSource();
+            binder.DataSource = list;
+            dataGridView1.DataSource = binder;
+        }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
-
         private void PurchasesUploadBtn_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
@@ -61,37 +69,8 @@ namespace ABCVEN
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            var app = new Excel.Application();
-            app.Visible = true;
-            var pathName = AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", "") + "Template.xlsx";
-            Excel.Workbook workbook = null;
-            Excel.Worksheet worksheet;
-            workbook = app.Workbooks.Add(1);
-            worksheet = (Excel.Worksheet)workbook.Sheets[1];
-            try
-            {
-                //worksheet.Range["A1"].Validation.Add(Excel.XlDVType.xlValidateList, Type.Missing,
-                //    Excel.XlFormatConditionOperator.xlBetween, "a,b,c,x");
-                var row = 1;
-                var cell = (Excel.Range)worksheet.Cells[row, 8];
-                cell.Validation.Delete();
-                cell.Validation.Add(
-                   XlDVType.xlValidateList,
-                   XlDVAlertStyle.xlValidAlertInformation,
-                   XlFormatConditionOperator.xlBetween,
-                   "a,b,c,v",
-                   Type.Missing);
-
-                cell.Validation.IgnoreBlank = true;
-                cell.Validation.InCellDropdown = true;
-            }
-            catch (Exception ex)
-            {
-
-            }
-            workbook.SaveAs("123.xlsx");
+           
         }
-
-
     }
+    
 }

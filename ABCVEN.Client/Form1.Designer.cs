@@ -59,8 +59,10 @@
             this.TNRadioButton = new System.Windows.Forms.RadioButton();
             this.DefaultDataRadioButton = new System.Windows.Forms.RadioButton();
             this.SalesUploadBtn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -295,6 +297,7 @@
             this.MNNCheckBox.TabIndex = 1;
             this.MNNCheckBox.Text = "МНН";
             this.MNNCheckBox.UseVisualStyleBackColor = true;
+            this.MNNCheckBox.Visible = false;
             // 
             // TNCheckBox
             // 
@@ -305,6 +308,7 @@
             this.TNCheckBox.TabIndex = 0;
             this.TNCheckBox.Text = "ТН";
             this.TNCheckBox.UseVisualStyleBackColor = true;
+            this.TNCheckBox.Visible = false;
             // 
             // groupBox2
             // 
@@ -328,6 +332,7 @@
             this.MNNRadioButton.TabStop = true;
             this.MNNRadioButton.Text = "По МНН";
             this.MNNRadioButton.UseVisualStyleBackColor = true;
+            this.MNNRadioButton.Visible = false;
             // 
             // TNRadioButton
             // 
@@ -339,6 +344,7 @@
             this.TNRadioButton.TabStop = true;
             this.TNRadioButton.Text = "По ТН";
             this.TNRadioButton.UseVisualStyleBackColor = true;
+            this.TNRadioButton.Visible = false;
             // 
             // DefaultDataRadioButton
             // 
@@ -350,6 +356,7 @@
             this.DefaultDataRadioButton.TabStop = true;
             this.DefaultDataRadioButton.Text = "Исходные данные";
             this.DefaultDataRadioButton.UseVisualStyleBackColor = true;
+            this.DefaultDataRadioButton.Visible = false;
             // 
             // SalesUploadBtn
             // 
@@ -361,11 +368,20 @@
             this.SalesUploadBtn.UseVisualStyleBackColor = true;
             this.SalesUploadBtn.Click += new System.EventHandler(this.SalesUploadBtn_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 265);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(458, 189);
+            this.dataGridView1.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 314);
+            this.ClientSize = new System.Drawing.Size(850, 505);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.SalesUploadBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -390,6 +406,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,6 +445,7 @@
         private System.Windows.Forms.RadioButton TNRadioButton;
         private System.Windows.Forms.RadioButton DefaultDataRadioButton;
         private System.Windows.Forms.Button SalesUploadBtn;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
