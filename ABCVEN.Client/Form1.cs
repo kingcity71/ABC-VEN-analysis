@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using ABCVEN.Interfaces;
+using Microsoft.Office.Interop.Excel;
+
 namespace ABCVEN
 {
     public partial class Form1 : Form
@@ -40,7 +42,39 @@ namespace ABCVEN
            // var list = ReadExcel(fileName);
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var app = new Excel.Application();
+            app.Visible = true;
+            var pathName = AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", "") + "Template.xlsx";
+            Excel.Workbook workbook = null;
+            Excel.Worksheet worksheet;
+            workbook = app.Workbooks.Add(1);
+            worksheet = (Excel.Worksheet)workbook.Sheets[1];
+            try
+            {
+                //worksheet.Range["A1"].Validation.Add(Excel.XlDVType.xlValidateList, Type.Missing,
+                //    Excel.XlFormatConditionOperator.xlBetween, "a,b,c,x");
+                var row = 1;
+                var cell = (Excel.Range)worksheet.Cells[row, 8];
+                cell.Validation.Delete();
+                cell.Validation.Add(
+                   XlDVType.xlValidateList,
+                   XlDVAlertStyle.xlValidAlertInformation,
+                   XlFormatConditionOperator.xlBetween,
+                   "a,b,c,v",
+                   Type.Missing);
 
+                cell.Validation.IgnoreBlank = true;
+                cell.Validation.InCellDropdown = true;
+            }
+            catch(Exception ex)
+            {
+                
+            }
+            workbook.SaveAs("123.xlsx");
+        }
+
+        
     }
 }
