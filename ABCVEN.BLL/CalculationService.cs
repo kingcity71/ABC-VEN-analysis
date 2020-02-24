@@ -35,6 +35,5 @@ namespace ABCVEN.BLL
             }
             return result;
         }
-        public string test() => null;
     }
 }

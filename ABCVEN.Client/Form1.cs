@@ -21,20 +21,13 @@ namespace ABCVEN
             this.crudService = crudService;
             this.calculationService = calculationService;
             InitializeComponent();
-            
+
         }
         private void SetInitialValues()
         {
-            accountingTypeComboBox.DataSource
-                = crudService.GetAllAccountingTypes().ToList();
-            storeComboBox.DataSource
-                = crudService.GetAllStores().ToList();
-            finSourceComboBox.DataSource
-                = crudService.GetAllFinSources().ToList();
-            producerComboBox.DataSource
-                = crudService.GetAllProducers().ToList();
+            SetComboBoxes();
 
-            var viewList = calculationService.GetSalesViewModels().Select(x=>(object)x).ToList();
+            var viewList = calculationService.GetSalesViewModels().Select(x => (object)x).ToList();
             SetDataGridView(viewList);
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -47,6 +40,20 @@ namespace ABCVEN
             binder.DataSource = list;
             dataGridView1.DataSource = binder;
         }
+        private void SetComboBoxes()
+        {
+            List<string> GetComboBoxList(List<string> list)
+            {
+                var result = new List<string>() { "Все" };
+                result.AddRange(list);
+                return result;
+            }
+            
+            accountingTypeComboBox.DataSource = GetComboBoxList(crudService.GetAllAccountingTypes().ToList());
+            storeComboBox.DataSource = GetComboBoxList(crudService.GetAllStores().ToList());
+            finSourceComboBox.DataSource = GetComboBoxList(crudService.GetAllFinSources().ToList());
+            producerComboBox.DataSource = GetComboBoxList(crudService.GetAllProducers().ToList());
+        }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
@@ -58,7 +65,7 @@ namespace ABCVEN
             var data = fileUploadService.ReadFile(fileName);
             crudService.SetPurchases(data);
             MessageBox.Show("Данные успешно загружены");
-            
+
         }
         private void SalesUploadBtn_Click(object sender, EventArgs e)
         {
@@ -70,8 +77,8 @@ namespace ABCVEN
         }
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
         }
     }
-    
+
 }

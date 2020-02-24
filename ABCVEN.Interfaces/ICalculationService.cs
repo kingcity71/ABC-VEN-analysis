@@ -10,6 +10,5 @@ namespace ABCVEN.Interfaces
     public interface ICalculationService
     {
         IEnumerable<SalesViewModel> GetSalesViewModels();
-        string test();
     }
 }

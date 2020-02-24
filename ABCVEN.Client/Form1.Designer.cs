@@ -54,15 +54,14 @@
             this.ACheckBox = new System.Windows.Forms.CheckBox();
             this.MNNCheckBox = new System.Windows.Forms.CheckBox();
             this.TNCheckBox = new System.Windows.Forms.CheckBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.MNNRadioButton = new System.Windows.Forms.RadioButton();
-            this.TNRadioButton = new System.Windows.Forms.RadioButton();
-            this.DefaultDataRadioButton = new System.Windows.Forms.RadioButton();
             this.SalesUploadBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -72,7 +71,7 @@
             // 
             // PurchasesUploadBtn
             // 
-            this.PurchasesUploadBtn.Location = new System.Drawing.Point(12, 12);
+            this.PurchasesUploadBtn.Location = new System.Drawing.Point(23, 26);
             this.PurchasesUploadBtn.Name = "PurchasesUploadBtn";
             this.PurchasesUploadBtn.Size = new System.Drawing.Size(145, 23);
             this.PurchasesUploadBtn.TabIndex = 0;
@@ -93,7 +92,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 48);
+            this.label1.Location = new System.Drawing.Point(6, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 13);
             this.label1.TabIndex = 2;
@@ -102,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 90);
+            this.label2.Location = new System.Drawing.Point(6, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 13);
             this.label2.TabIndex = 3;
@@ -110,14 +109,14 @@
             // 
             // dateFromDP
             // 
-            this.dateFromDP.Location = new System.Drawing.Point(32, 48);
+            this.dateFromDP.Location = new System.Drawing.Point(45, 66);
             this.dateFromDP.Name = "dateFromDP";
             this.dateFromDP.Size = new System.Drawing.Size(125, 20);
             this.dateFromDP.TabIndex = 4;
             // 
             // dateToDP
             // 
-            this.dateToDP.Location = new System.Drawing.Point(32, 84);
+            this.dateToDP.Location = new System.Drawing.Point(45, 97);
             this.dateToDP.Name = "dateToDP";
             this.dateToDP.Size = new System.Drawing.Size(125, 20);
             this.dateToDP.TabIndex = 5;
@@ -125,7 +124,7 @@
             // storeLabel
             // 
             this.storeLabel.AutoSize = true;
-            this.storeLabel.Location = new System.Drawing.Point(202, 55);
+            this.storeLabel.Location = new System.Drawing.Point(5, 32);
             this.storeLabel.Name = "storeLabel";
             this.storeLabel.Size = new System.Drawing.Size(38, 13);
             this.storeLabel.TabIndex = 7;
@@ -134,7 +133,7 @@
             // storeComboBox
             // 
             this.storeComboBox.FormattingEnabled = true;
-            this.storeComboBox.Location = new System.Drawing.Point(352, 52);
+            this.storeComboBox.Location = new System.Drawing.Point(49, 29);
             this.storeComboBox.Name = "storeComboBox";
             this.storeComboBox.Size = new System.Drawing.Size(121, 21);
             this.storeComboBox.TabIndex = 8;
@@ -142,7 +141,7 @@
             // finSourceComboBox
             // 
             this.finSourceComboBox.FormattingEnabled = true;
-            this.finSourceComboBox.Location = new System.Drawing.Point(352, 88);
+            this.finSourceComboBox.Location = new System.Drawing.Point(336, 29);
             this.finSourceComboBox.Name = "finSourceComboBox";
             this.finSourceComboBox.Size = new System.Drawing.Size(121, 21);
             this.finSourceComboBox.TabIndex = 10;
@@ -150,7 +149,7 @@
             // finSourceLabel
             // 
             this.finSourceLabel.AutoSize = true;
-            this.finSourceLabel.Location = new System.Drawing.Point(202, 91);
+            this.finSourceLabel.Location = new System.Drawing.Point(187, 32);
             this.finSourceLabel.Name = "finSourceLabel";
             this.finSourceLabel.Size = new System.Drawing.Size(144, 13);
             this.finSourceLabel.TabIndex = 9;
@@ -159,7 +158,7 @@
             // producerComboBox
             // 
             this.producerComboBox.FormattingEnabled = true;
-            this.producerComboBox.Location = new System.Drawing.Point(352, 157);
+            this.producerComboBox.Location = new System.Drawing.Point(337, 100);
             this.producerComboBox.Name = "producerComboBox";
             this.producerComboBox.Size = new System.Drawing.Size(121, 21);
             this.producerComboBox.TabIndex = 14;
@@ -167,7 +166,7 @@
             // producerLabel
             // 
             this.producerLabel.AutoSize = true;
-            this.producerLabel.Location = new System.Drawing.Point(202, 160);
+            this.producerLabel.Location = new System.Drawing.Point(245, 108);
             this.producerLabel.Name = "producerLabel";
             this.producerLabel.Size = new System.Drawing.Size(86, 13);
             this.producerLabel.TabIndex = 13;
@@ -176,7 +175,7 @@
             // accountingTypeComboBox
             // 
             this.accountingTypeComboBox.FormattingEnabled = true;
-            this.accountingTypeComboBox.Location = new System.Drawing.Point(352, 121);
+            this.accountingTypeComboBox.Location = new System.Drawing.Point(337, 65);
             this.accountingTypeComboBox.Name = "accountingTypeComboBox";
             this.accountingTypeComboBox.Size = new System.Drawing.Size(121, 21);
             this.accountingTypeComboBox.TabIndex = 12;
@@ -184,7 +183,7 @@
             // accountingTypeLabel
             // 
             this.accountingTypeLabel.AutoSize = true;
-            this.accountingTypeLabel.Location = new System.Drawing.Point(202, 124);
+            this.accountingTypeLabel.Location = new System.Drawing.Point(263, 73);
             this.accountingTypeLabel.Name = "accountingTypeLabel";
             this.accountingTypeLabel.Size = new System.Drawing.Size(56, 13);
             this.accountingTypeLabel.TabIndex = 11;
@@ -310,57 +309,9 @@
             this.TNCheckBox.UseVisualStyleBackColor = true;
             this.TNCheckBox.Visible = false;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.MNNRadioButton);
-            this.groupBox2.Controls.Add(this.TNRadioButton);
-            this.groupBox2.Controls.Add(this.DefaultDataRadioButton);
-            this.groupBox2.Location = new System.Drawing.Point(13, 207);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(459, 42);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Показать";
-            // 
-            // MNNRadioButton
-            // 
-            this.MNNRadioButton.AutoSize = true;
-            this.MNNRadioButton.Location = new System.Drawing.Point(308, 19);
-            this.MNNRadioButton.Name = "MNNRadioButton";
-            this.MNNRadioButton.Size = new System.Drawing.Size(67, 17);
-            this.MNNRadioButton.TabIndex = 19;
-            this.MNNRadioButton.TabStop = true;
-            this.MNNRadioButton.Text = "По МНН";
-            this.MNNRadioButton.UseVisualStyleBackColor = true;
-            this.MNNRadioButton.Visible = false;
-            // 
-            // TNRadioButton
-            // 
-            this.TNRadioButton.AutoSize = true;
-            this.TNRadioButton.Location = new System.Drawing.Point(160, 19);
-            this.TNRadioButton.Name = "TNRadioButton";
-            this.TNRadioButton.Size = new System.Drawing.Size(57, 17);
-            this.TNRadioButton.TabIndex = 18;
-            this.TNRadioButton.TabStop = true;
-            this.TNRadioButton.Text = "По ТН";
-            this.TNRadioButton.UseVisualStyleBackColor = true;
-            this.TNRadioButton.Visible = false;
-            // 
-            // DefaultDataRadioButton
-            // 
-            this.DefaultDataRadioButton.AutoSize = true;
-            this.DefaultDataRadioButton.Location = new System.Drawing.Point(6, 19);
-            this.DefaultDataRadioButton.Name = "DefaultDataRadioButton";
-            this.DefaultDataRadioButton.Size = new System.Drawing.Size(117, 17);
-            this.DefaultDataRadioButton.TabIndex = 17;
-            this.DefaultDataRadioButton.TabStop = true;
-            this.DefaultDataRadioButton.Text = "Исходные данные";
-            this.DefaultDataRadioButton.UseVisualStyleBackColor = true;
-            this.DefaultDataRadioButton.Visible = false;
-            // 
             // SalesUploadBtn
             // 
-            this.SalesUploadBtn.Location = new System.Drawing.Point(201, 12);
+            this.SalesUploadBtn.Location = new System.Drawing.Point(308, 26);
             this.SalesUploadBtn.Name = "SalesUploadBtn";
             this.SalesUploadBtn.Size = new System.Drawing.Size(145, 23);
             this.SalesUploadBtn.TabIndex = 17;
@@ -371,11 +322,43 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 265);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 267);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(458, 189);
-            this.dataGridView1.TabIndex = 18;
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(467, 204);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.PurchasesUploadBtn);
+            this.groupBox3.Controls.Add(this.SalesUploadBtn);
+            this.groupBox3.Location = new System.Drawing.Point(13, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(469, 70);
+            this.groupBox3.TabIndex = 19;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Загрузка файлов";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dateToDP);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.dateFromDP);
+            this.groupBox4.Controls.Add(this.finSourceComboBox);
+            this.groupBox4.Controls.Add(this.accountingTypeComboBox);
+            this.groupBox4.Controls.Add(this.finSourceLabel);
+            this.groupBox4.Controls.Add(this.producerComboBox);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.producerLabel);
+            this.groupBox4.Controls.Add(this.accountingTypeLabel);
+            this.groupBox4.Controls.Add(this.storeComboBox);
+            this.groupBox4.Controls.Add(this.storeLabel);
+            this.groupBox4.Location = new System.Drawing.Point(15, 87);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(469, 163);
+            this.groupBox4.TabIndex = 20;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Фильтр";
             // 
             // Form1
             // 
@@ -383,33 +366,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 505);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.SalesUploadBtn);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.producerComboBox);
-            this.Controls.Add(this.producerLabel);
-            this.Controls.Add(this.accountingTypeComboBox);
-            this.Controls.Add(this.accountingTypeLabel);
-            this.Controls.Add(this.finSourceComboBox);
-            this.Controls.Add(this.finSourceLabel);
-            this.Controls.Add(this.storeComboBox);
-            this.Controls.Add(this.storeLabel);
-            this.Controls.Add(this.dateToDP);
-            this.Controls.Add(this.dateFromDP);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.PurchasesUploadBtn);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -441,12 +411,10 @@
         private System.Windows.Forms.CheckBox TNCheckBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button showDiagramm;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton MNNRadioButton;
-        private System.Windows.Forms.RadioButton TNRadioButton;
-        private System.Windows.Forms.RadioButton DefaultDataRadioButton;
         private System.Windows.Forms.Button SalesUploadBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 
