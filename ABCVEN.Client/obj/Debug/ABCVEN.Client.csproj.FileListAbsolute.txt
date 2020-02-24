@@ -9,10 +9,8 @@ D:\repos\ABC-VEN analysis\ABCVEN.Client\obj\Debug\ABCVEN.exe
 D:\repos\ABC-VEN analysis\ABCVEN.Client\obj\Debug\ABCVEN.pdb
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.BLL.dll
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Interfaces.dll
-D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\Ninject.dll
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.BLL.pdb
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Interfaces.pdb
-D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\Ninject.xml
 D:\repos\ABC-VEN analysis\ABCVEN.Client\obj\Debug\ABCVEN.Client.csproj.CopyComplete
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Data.dll
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\EntityFramework.dll
@@ -22,3 +20,7 @@ D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Data.pdb
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Data.dll.config
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\EntityFramework.xml
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Entities.pdb
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\SimpleInjector.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\SimpleInjector.xml
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\EntityFramework.SqlServer.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\EntityFramework.SqlServer.xml

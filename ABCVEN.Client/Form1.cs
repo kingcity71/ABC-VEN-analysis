@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using ABCVEN.Interfaces;
 using Microsoft.Office.Interop.Excel;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace ABCVEN
 {
@@ -22,10 +18,20 @@ namespace ABCVEN
         {
             this.fileUploadService = fileUploadService;
             this.crudService = crudService;
-            var q = crudService.GetAllAccountingTypes();
             InitializeComponent();
+            SetInitialValues();
         }
-
+        private void SetInitialValues()
+        {
+            accountingTypeComboBox.DataSource
+                = crudService.GetAllAccountingTypes().ToList();
+            storeComboBox.DataSource
+                = crudService.GetAllStores().ToList();
+            finSourceComboBox.DataSource
+                = crudService.GetAllFinSources().ToList();
+            producerComboBox.DataSource
+                = crudService.GetAllProducers().ToList();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 

@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ABCVEN.BLL;
+using ABCVEN.Data;
 using ABCVEN.Interfaces;
-using Ninject;
-using Ninject.Modules;
-
+using SimpleInjector;
+using SimpleInjector.Lifestyles;
 
 namespace ABCVEN
 {
     static class Program
     {
+        private static Container container;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -20,12 +19,20 @@ namespace ABCVEN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Bootstrap();
+            using(ThreadScopedLifestyle.BeginScope(container))
+                Application.Run(container.GetInstance<Form1>());
+        }
+        static void Bootstrap()
+        {
+            container = new Container();
+            container.Options.DefaultScopedLifestyle =  new ThreadScopedLifestyle();
+            container.Register<ABCVENContext>(Lifestyle.Scoped);
+            container.Register<IFileUploadService, FileUploadService>(Lifestyle.Scoped);
+            container.Register<ICrudService, CrudService>(Lifestyle.Scoped);
+            container.Register<Form1>(Lifestyle.Scoped);
 
-            var registrations = new NinjectRegistrations();
-            var kernel = new StandardKernel(registrations);
-            var fileService = kernel.Get<IFileUploadService>();
-            var crudService = kernel.Get<ICrudService>();
-            Application.Run(new Form1(fileService,crudService));
+            container.Verify();
         }
     }
 }

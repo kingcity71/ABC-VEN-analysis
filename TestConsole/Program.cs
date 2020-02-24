@@ -12,7 +12,7 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-           // DBInitial();
+            DBInitial();
         }
         static void DBInitial()
         {
@@ -50,11 +50,11 @@ namespace TestConsole
                 context.AccountingTypes.Add(new AccountingType() { Name = "Вид учета 4" });
                 context.AccountingTypes.Add(new AccountingType() { Name = "Вид учета 5" });
 
-                context.FinanceSources.Add(new FinanceSource() { Name = "Источник финансирования 1" });
-                context.FinanceSources.Add(new FinanceSource() { Name = "Источник финансирования 2" });
-                context.FinanceSources.Add(new FinanceSource() { Name = "Источник финансирования 3" });
-                context.FinanceSources.Add(new FinanceSource() { Name = "Источник финансирования 4" });
-                context.FinanceSources.Add(new FinanceSource() { Name = "Источник финансирования 5" });
+                context.FinanceSources.Add(new FinanceSource() { Name = "Источник 1" });
+                context.FinanceSources.Add(new FinanceSource() { Name = "Источник 2" });
+                context.FinanceSources.Add(new FinanceSource() { Name = "Источник 3" });
+                context.FinanceSources.Add(new FinanceSource() { Name = "Источник 4" });
+                context.FinanceSources.Add(new FinanceSource() { Name = "Источник 5" });
 
                 context.Stores.Add(new Store() { Name = "Склад 1" });
                 context.Stores.Add(new Store() { Name = "Склад 2" });
