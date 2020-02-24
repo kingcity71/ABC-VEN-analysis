@@ -8,11 +8,10 @@ namespace ABCVEN.Entity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public DateTime Date { get; set; }
         public int Count { get; set; }
-        public double Dosage { get; set; }
-        public Guid MedicineId { get; set; }
-        public Guid PatientId { get; set; }
+        public int Sum { get; set; }
+        public int MedicineId { get; set; }
     }
 }

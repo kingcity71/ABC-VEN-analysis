@@ -14,16 +14,23 @@ namespace ABCVEN.BLL
             this.context = context;
         }
         public IEnumerable<string> GetAllAccountingTypes()
-        => context.AccountingTypes.Select(x => x.Name).AsEnumerable();
-
+        => context.Medicines.Select(x => x.AccountingType)
+            .Distinct()
+            .AsEnumerable();
 
         public IEnumerable<string> GetAllFinSources()
-        => context.FinanceSources.Select(x => x.Name).AsEnumerable();
+        => context.Purchases.Select(x => x.FinanceSource)
+            .Distinct()
+            .AsEnumerable();
 
         public IEnumerable<string> GetAllProducers()
-        => context.Producers.Select(x => x.Name).AsEnumerable();
+        => context.Purchases.Select(x => x.Producer)
+            .Distinct()
+            .AsEnumerable();
 
         public IEnumerable<string> GetAllStores()
-        => context.Stores.Select(x => x.Name).AsEnumerable();
+        => context.Purchases.Select(x => x.Store)
+            .Distinct()
+            .AsEnumerable();
     }
 }

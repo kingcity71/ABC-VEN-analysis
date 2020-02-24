@@ -8,15 +8,14 @@ namespace ABCVEN.Entity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public Guid Id { get; set; }
-        public Guid FinanceSourceId { get; set; }
-        public Guid StoreId { get; set; }
-        public string ExternalStoreName { get; set; }
+        public int Id { get; set; }
         public DateTime Date { get; set; }
+        public int MedicineId { get; set; }
         public int Count { get; set; }
         public double Sum { get; set; }
-        public Guid MedicineId { get; set; }
-        public Guid ProducerId { get; set; }
-        public Guid SupplierId { get; set; }
+        public string Producer { get; set; }
+        public string Supplier { get; set; }
+        public string FinanceSource { get; set; }
+        public string Store { get; set; }
     }
 }
