@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data;
-
 using System.ComponentModel;
 using System.Windows.Forms;
 //using Excel = Microsoft.Office.Interop.Excel;
@@ -15,11 +13,13 @@ namespace ABCVEN
     {
         private readonly IFileUploadService fileUploadService;
         private readonly ICrudService crudService;
+        private readonly ICalculationService calculationService;
 
-        public Form1(IFileUploadService fileUploadService, ICrudService crudService)
+        public Form1(IFileUploadService fileUploadService, ICrudService crudService, ICalculationService calculationService)
         {
             this.fileUploadService = fileUploadService;
             this.crudService = crudService;
+            this.calculationService = calculationService;
             InitializeComponent();
             
         }
@@ -33,12 +33,13 @@ namespace ABCVEN
                 = crudService.GetAllFinSources().ToList();
             producerComboBox.DataSource
                 = crudService.GetAllProducers().ToList();
+
+            var viewList = calculationService.GetSalesViewModels().Select(x=>(object)x).ToList();
+            SetDataGridView(viewList);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             SetInitialValues();
-            //SetDataGridView(list);
-            
         }
         private void SetDataGridView(List<object> list)
         {

@@ -41,9 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICalculationService.cs" />
     <Compile Include="ICrudService.cs" />
     <Compile Include="IFileUploadService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABCVEN.Entity\ABCVEN.Entity.csproj">
+      <Project>{2AEFB4A2-F26F-4CF5-9D3C-34FD53EBC5BF}</Project>
+      <Name>ABCVEN.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABCVEN.Models\ABCVEN.Models.csproj">
+      <Project>{8F57DD4D-F224-4E20-9C47-680AC1DC8446}</Project>
+      <Name>ABCVEN.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -106,9 +106,17 @@
       <Project>{0F882786-C17B-4D6C-88E8-60AC7D243386}</Project>
       <Name>ABCVEN.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ABCVEN.Entity\ABCVEN.Entity.csproj">
+      <Project>{2AEFB4A2-F26F-4CF5-9D3C-34FD53EBC5BF}</Project>
+      <Name>ABCVEN.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ABCVEN.Interfaces\ABCVEN.Interfaces.csproj">
       <Project>{e366e334-ff5e-496d-819f-6ae0a14b0f0c}</Project>
       <Name>ABCVEN.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABCVEN.Models\ABCVEN.Models.csproj">
+      <Project>{8f57dd4d-f224-4e20-9c47-680ac1dc8446}</Project>
+      <Name>ABCVEN.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,3 @@
-D:\repos\ABC-VEN analysis\ABCVEN.Data\obj\Debug\ABCVEN.Data.csprojAssemblyReference.cache
 D:\repos\ABC-VEN analysis\ABCVEN.Data\bin\Debug\ABCVEN.Data.dll.config
 D:\repos\ABC-VEN analysis\ABCVEN.Data\bin\Debug\ABCVEN.Data.dll
 D:\repos\ABC-VEN analysis\ABCVEN.Data\bin\Debug\ABCVEN.Data.pdb
@@ -8,6 +7,7 @@ D:\repos\ABC-VEN analysis\ABCVEN.Data\bin\Debug\EntityFramework.SqlServer.dll
 D:\repos\ABC-VEN analysis\ABCVEN.Data\bin\Debug\ABCVEN.Entities.pdb
 D:\repos\ABC-VEN analysis\ABCVEN.Data\bin\Debug\EntityFramework.xml
 D:\repos\ABC-VEN analysis\ABCVEN.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\repos\ABC-VEN analysis\ABCVEN.Data\obj\Debug\ABCVEN.Data.csprojAssemblyReference.cache
 D:\repos\ABC-VEN analysis\ABCVEN.Data\obj\Debug\ABCVEN.Data.csproj.CopyComplete
 D:\repos\ABC-VEN analysis\ABCVEN.Data\obj\Debug\ABCVEN.Data.dll
 D:\repos\ABC-VEN analysis\ABCVEN.Data\obj\Debug\ABCVEN.Data.pdb

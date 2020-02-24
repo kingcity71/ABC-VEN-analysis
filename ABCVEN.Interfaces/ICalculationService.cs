@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ABCVEN.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace ABCVEN.Interfaces
 {
-    interface ICalculationService
+    public interface ICalculationService
     {
+        IEnumerable<SalesViewModel> GetSalesViewModels();
+        string test();
     }
 }

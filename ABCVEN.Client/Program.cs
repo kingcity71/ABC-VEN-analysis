@@ -3,8 +3,10 @@ using System.Windows.Forms;
 using ABCVEN.BLL;
 using ABCVEN.Data;
 using ABCVEN.Interfaces;
+using ABCVEN.Models;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
+
 
 namespace ABCVEN
 {
@@ -30,6 +32,8 @@ namespace ABCVEN
             container.Register<ABCVENContext>(Lifestyle.Scoped);
             container.Register<IFileUploadService, FileUploadService>(Lifestyle.Scoped);
             container.Register<ICrudService, CrudService>(Lifestyle.Scoped);
+            container.Register<ICalculationService, CalculationService>(Lifestyle.Scoped);
+            container.Register<SalesViewModel>(Lifestyle.Scoped);
             container.Register<Form1>(Lifestyle.Scoped);
 
             container.Verify();

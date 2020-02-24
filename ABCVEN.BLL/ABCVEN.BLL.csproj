@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculationService.cs" />
     <Compile Include="CrudService.cs" />
     <Compile Include="FileUploadService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +72,10 @@
     <ProjectReference Include="..\ABCVEN.Interfaces\ABCVEN.Interfaces.csproj">
       <Project>{e366e334-ff5e-496d-819f-6ae0a14b0f0c}</Project>
       <Name>ABCVEN.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABCVEN.Models\ABCVEN.Models.csproj">
+      <Project>{8F57DD4D-F224-4E20-9C47-680AC1DC8446}</Project>
+      <Name>ABCVEN.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

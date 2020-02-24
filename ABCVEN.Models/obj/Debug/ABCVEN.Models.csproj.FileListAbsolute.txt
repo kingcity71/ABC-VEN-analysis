@@ -1,0 +1,5 @@
+D:\repos\ABC-VEN analysis\ABCVEN.Models\obj\Debug\ABCVEN.Models.csprojAssemblyReference.cache
+D:\repos\ABC-VEN analysis\ABCVEN.Models\bin\Debug\ABCVEN.Models.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Models\bin\Debug\ABCVEN.Models.pdb
+D:\repos\ABC-VEN analysis\ABCVEN.Models\obj\Debug\ABCVEN.Models.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Models\obj\Debug\ABCVEN.Models.pdb

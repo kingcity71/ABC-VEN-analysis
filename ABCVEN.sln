@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCVEN.BLL", "ABCVEN.BLL\AB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCVEN.Interfaces", "ABCVEN.Interfaces\ABCVEN.Interfaces.csproj", "{E366E334-FF5E-496D-819F-6AE0A14B0F0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCVEN.Models", "ABCVEN.Models\ABCVEN.Models.csproj", "{8F57DD4D-F224-4E20-9C47-680AC1DC8446}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E366E334-FF5E-496D-819F-6AE0A14B0F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E366E334-FF5E-496D-819F-6AE0A14B0F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E366E334-FF5E-496D-819F-6AE0A14B0F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F57DD4D-F224-4E20-9C47-680AC1DC8446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F57DD4D-F224-4E20-9C47-680AC1DC8446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F57DD4D-F224-4E20-9C47-680AC1DC8446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F57DD4D-F224-4E20-9C47-680AC1DC8446}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
