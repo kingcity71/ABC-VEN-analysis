@@ -23,8 +23,9 @@ namespace ABCVEN
 
             var registrations = new NinjectRegistrations();
             var kernel = new StandardKernel(registrations);
-            var dep = kernel.Get<IFileUploadService>();
-            Application.Run(new Form1(dep));
+            var fileService = kernel.Get<IFileUploadService>();
+            var crudService = kernel.Get<ICrudService>();
+            Application.Run(new Form1(fileService,crudService));
         }
     }
 }

@@ -14,3 +14,11 @@ D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.BLL.pdb
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Interfaces.pdb
 D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\Ninject.xml
 D:\repos\ABC-VEN analysis\ABCVEN.Client\obj\Debug\ABCVEN.Client.csproj.CopyComplete
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Data.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\EntityFramework.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Entities.dll
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.BLL.dll.config
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Data.pdb
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Data.dll.config
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\EntityFramework.xml
+D:\repos\ABC-VEN analysis\ABCVEN.Client\bin\Debug\ABCVEN.Entities.pdb

@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ABCVEN.Entity
 {
     public class Purchase
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public Guid Id { get; set; }
-        public string FinanceSource { get; set; }
+        public Guid FinanceSourceId { get; set; }
+        public Guid StoreId { get; set; }
         public string ExternalStoreName { get; set; }
         public DateTime Date { get; set; }
         public int Count { get; set; }

@@ -93,6 +93,10 @@
       <Project>{8fcda464-2e3d-421b-b591-cf902adfcf33}</Project>
       <Name>ABCVEN.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ABCVEN.Data\ABCVEN.Data.csproj">
+      <Project>{0F882786-C17B-4D6C-88E8-60AC7D243386}</Project>
+      <Name>ABCVEN.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ABCVEN.Interfaces\ABCVEN.Interfaces.csproj">
       <Project>{e366e334-ff5e-496d-819f-6ae0a14b0f0c}</Project>
       <Name>ABCVEN.Interfaces</Name>

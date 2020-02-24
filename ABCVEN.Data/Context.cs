@@ -12,6 +12,8 @@ namespace ABCVEN.Data
     public class ABCVENContext:DbContext
     {
         public ABCVENContext() { }
+        public DbSet<AccountingType> AccountingTypes { get; set; }
+        public DbSet<FinanceSource> FinanceSources { get; set; }
         public DbSet<Medicine> Medicines { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Store> Stores { get; set; }

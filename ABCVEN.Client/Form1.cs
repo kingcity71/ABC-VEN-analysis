@@ -16,10 +16,13 @@ namespace ABCVEN
     public partial class Form1 : Form
     {
         private readonly IFileUploadService fileUploadService;
+        private readonly ICrudService crudService;
 
-        public Form1(IFileUploadService fileUploadService)
+        public Form1(IFileUploadService fileUploadService, ICrudService crudService)
         {
             this.fileUploadService = fileUploadService;
+            this.crudService = crudService;
+            var q = crudService.GetAllAccountingTypes();
             InitializeComponent();
         }
 
