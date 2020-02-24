@@ -75,35 +75,28 @@ namespace ABCVEN.BLL
             var calculated = calculationService.GetABC();
             var result = new DiagrammViewModel();
 
-            result.A = GetDiagrammViewModel(calculated.Item1);
-            result.B = GetDiagrammViewModel(calculated.Item2);
-            result.C = GetDiagrammViewModel(calculated.Item3);
+            result.A = diagrammViewModel.IncludeA ? GetDiagrammViewModel(calculated.Item1, diagrammViewModel) : GetDiagrammUnitModel();
+            result.B = diagrammViewModel.IncludeB ? GetDiagrammViewModel(calculated.Item2, diagrammViewModel) : GetDiagrammUnitModel();
+            result.C = diagrammViewModel.IncludeC ? GetDiagrammViewModel(calculated.Item3, diagrammViewModel) : GetDiagrammUnitModel();
             result.Total = GetDiagrammTotalViewModel(result.A, result.B, result.C);
-
-            //result.A = new UnitModel() { E = 20, N = 30, V = 43 };
-            //result.B = new UnitModel() { E = 100, N = 200, V = 123 };
-            //result.C = new UnitModel() { E = 120, N = 40, V = 23 };
-            //result.Total = new UnitModel() { E = result.A.E+result.B.E+result.C.E, 
-            //    N = result.A.N + result.B.N + result.C.N, 
-            //    V = result.A.V + result.B.V + result.C.V
-            //};
 
             return result;
         }
 
-        private DiagrammUnitModel GetDiagrammViewModel(ABCGroupModel groupModel)
+        private DiagrammUnitModel GetDiagrammViewModel(ABCGroupModel groupModel, DiagrammViewModel diagrammViewModel)
             => new DiagrammUnitModel()
             {
-                V = groupModel.ABCModels.Where(x => x.VEN == "V").Sum(x => x.SumPercentage),
-                E = groupModel.ABCModels.Where(x => x.VEN == "E").Sum(x => x.SumPercentage),
-                N = groupModel.ABCModels.Where(x => x.VEN == "N").Sum(x => x.SumPercentage)
+                V = diagrammViewModel.IncludeV ? groupModel.ABCModels.Where(x => x.VEN == "V").Sum(x => x.SumPercentage):0,
+                E = diagrammViewModel.IncludeE ? groupModel.ABCModels.Where(x => x.VEN == "E").Sum(x => x.SumPercentage):0,
+                N = diagrammViewModel.IncludeN ? groupModel.ABCModels.Where(x => x.VEN == "N").Sum(x => x.SumPercentage):0
             };
-        private DiagrammUnitModel GetDiagrammTotalViewModel(DiagrammUnitModel A, DiagrammUnitModel B, DiagrammUnitModel C)
-        => new DiagrammUnitModel()
+        private DiagrammUnitModel GetDiagrammTotalViewModel(DiagrammUnitModel A, DiagrammUnitModel B, DiagrammUnitModel C) => 
+            new DiagrammUnitModel()
         {
             V = A.V + C.V + B.V,
             E = A.E + C.E + B.E,
             N = A.N + C.N + B.N
         };
+        private DiagrammUnitModel GetDiagrammUnitModel() => new DiagrammUnitModel();
     }
 }

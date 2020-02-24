@@ -30,13 +30,24 @@ namespace ABCVEN
             SetDatePickerBorders();
             var viewList = viewService.GetSalesViewModels().Select(x => (object)x).ToList();
             SetDataGridView(viewList);
+            var diaMod = viewService.GetDiagrammModel(GetDiagrammFilterModel());
+            SetDiagrammData(diaMod);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            var diaMod = viewService.GetDiagrammModel(null);
-            SetDiagrammData(diaMod);
             SetInitialValues();
         }
+        private DiagrammViewModel GetDiagrammFilterModel()
+            => new DiagrammViewModel()
+            {
+                IncludeA = ACheckBox.Checked,
+                IncludeB = BCheckBox.Checked,
+                IncludeC = CCheckBox.Checked,
+
+                IncludeV = VCheckBox.Checked,
+                IncludeE = ECheckBox.Checked,
+                IncludeN = NCheckBox.Checked
+            };
         private void SetDataGridView(List<object> list)
         {
             var binder = new BindingSource();
@@ -65,16 +76,19 @@ namespace ABCVEN
         }
         private void SetDiagrammData(DiagrammViewModel diaMod)
         {
+            chart1.Series["V"].Points.Clear();
             chart1.Series["V"].Points.AddXY("A", diaMod.A.V);
             chart1.Series["V"].Points.AddXY("B", diaMod.B.V);
             chart1.Series["V"].Points.AddXY("C", diaMod.C.V);
             chart1.Series["V"].Points.AddXY("Всего", diaMod.Total.V);
 
+            chart1.Series["E"].Points.Clear();
             chart1.Series["E"].Points.AddXY("A", diaMod.A.E);
             chart1.Series["E"].Points.AddXY("B", diaMod.B.E);
             chart1.Series["E"].Points.AddXY("C", diaMod.C.E);
             chart1.Series["E"].Points.AddXY("Всего", diaMod.Total.E);
 
+            chart1.Series["N"].Points.Clear();
             chart1.Series["N"].Points.AddXY("A", diaMod.A.N);
             chart1.Series["N"].Points.AddXY("B", diaMod.B.N);
             chart1.Series["N"].Points.AddXY("C", diaMod.C.N);
@@ -118,8 +132,11 @@ namespace ABCVEN
             SetDataGridView(viewModels);
         }
 
-        
-
+        private void showDiagramm_Click(object sender, EventArgs e)
+        {
+            var diaMod = viewService.GetDiagrammModel(GetDiagrammFilterModel());
+            SetDiagrammData(diaMod);
+        }
     }
 
 }

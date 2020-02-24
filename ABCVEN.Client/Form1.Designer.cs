@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.PurchasesUploadBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,9 +50,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.showDiagramm = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.NCheckBox = new System.Windows.Forms.CheckBox();
+            this.ECheckBox = new System.Windows.Forms.CheckBox();
+            this.VCheckBox = new System.Windows.Forms.CheckBox();
             this.CCheckBox = new System.Windows.Forms.CheckBox();
             this.BCheckBox = new System.Windows.Forms.CheckBox();
             this.ACheckBox = new System.Windows.Forms.CheckBox();
@@ -188,9 +188,9 @@
             // 
             this.groupBox1.Controls.Add(this.showDiagramm);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox3);
+            this.groupBox1.Controls.Add(this.NCheckBox);
+            this.groupBox1.Controls.Add(this.ECheckBox);
+            this.groupBox1.Controls.Add(this.VCheckBox);
             this.groupBox1.Controls.Add(this.CCheckBox);
             this.groupBox1.Controls.Add(this.BCheckBox);
             this.groupBox1.Controls.Add(this.ACheckBox);
@@ -203,12 +203,13 @@
             // 
             // showDiagramm
             // 
-            this.showDiagramm.Location = new System.Drawing.Point(332, 19);
+            this.showDiagramm.Location = new System.Drawing.Point(289, 19);
             this.showDiagramm.Name = "showDiagramm";
             this.showDiagramm.Size = new System.Drawing.Size(75, 23);
             this.showDiagramm.TabIndex = 9;
             this.showDiagramm.Text = "Показать";
             this.showDiagramm.UseVisualStyleBackColor = true;
+            this.showDiagramm.Click += new System.EventHandler(this.showDiagramm_Click);
             // 
             // label3
             // 
@@ -219,71 +220,77 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Вывести на диаграмму";
             // 
-            // checkBox1
+            // NCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(376, 53);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(34, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "N";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.Checked = true;
+            this.NCheckBox.AutoSize = true;
+            this.NCheckBox.Checked = true;
+            this.NCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.NCheckBox.Location = new System.Drawing.Point(376, 53);
+            this.NCheckBox.Name = "NCheckBox";
+            this.NCheckBox.Size = new System.Drawing.Size(34, 17);
+            this.NCheckBox.TabIndex = 7;
+            this.NCheckBox.Text = "N";
+            this.NCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // ECheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(332, 53);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(33, 17);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "E";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.Checked = true;
+            this.ECheckBox.AutoSize = true;
+            this.ECheckBox.Checked = true;
+            this.ECheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ECheckBox.Location = new System.Drawing.Point(332, 53);
+            this.ECheckBox.Name = "ECheckBox";
+            this.ECheckBox.Size = new System.Drawing.Size(33, 17);
+            this.ECheckBox.TabIndex = 6;
+            this.ECheckBox.Text = "E";
+            this.ECheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // VCheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(289, 53);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(33, 17);
-            this.checkBox3.TabIndex = 5;
-            this.checkBox3.Text = "V";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.Checked = true;
+            this.VCheckBox.AutoSize = true;
+            this.VCheckBox.Checked = true;
+            this.VCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.VCheckBox.Location = new System.Drawing.Point(289, 53);
+            this.VCheckBox.Name = "VCheckBox";
+            this.VCheckBox.Size = new System.Drawing.Size(33, 17);
+            this.VCheckBox.TabIndex = 5;
+            this.VCheckBox.Text = "V";
+            this.VCheckBox.UseVisualStyleBackColor = true;
             // 
             // CCheckBox
             // 
             this.CCheckBox.AutoSize = true;
+            this.CCheckBox.Checked = true;
+            this.CCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CCheckBox.Location = new System.Drawing.Point(99, 55);
             this.CCheckBox.Name = "CCheckBox";
             this.CCheckBox.Size = new System.Drawing.Size(33, 17);
             this.CCheckBox.TabIndex = 4;
             this.CCheckBox.Text = "C";
             this.CCheckBox.UseVisualStyleBackColor = true;
-            this.CCheckBox.Checked = true;
             // 
             // BCheckBox
             // 
             this.BCheckBox.AutoSize = true;
+            this.BCheckBox.Checked = true;
+            this.BCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.BCheckBox.Location = new System.Drawing.Point(55, 55);
             this.BCheckBox.Name = "BCheckBox";
             this.BCheckBox.Size = new System.Drawing.Size(33, 17);
             this.BCheckBox.TabIndex = 3;
             this.BCheckBox.Text = "B";
             this.BCheckBox.UseVisualStyleBackColor = true;
-            this.BCheckBox.Checked = true;
             // 
             // ACheckBox
             // 
             this.ACheckBox.AutoSize = true;
+            this.ACheckBox.Checked = true;
+            this.ACheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ACheckBox.Location = new System.Drawing.Point(12, 55);
             this.ACheckBox.Name = "ACheckBox";
             this.ACheckBox.Size = new System.Drawing.Size(33, 17);
             this.ACheckBox.TabIndex = 2;
             this.ACheckBox.Text = "A";
             this.ACheckBox.UseVisualStyleBackColor = true;
-            this.ACheckBox.Checked = true;
             // 
             // SalesUploadBtn
             // 
@@ -349,10 +356,10 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(508, 120);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -360,21 +367,21 @@
         System.Drawing.Color.Green,
         System.Drawing.Color.Yellow,
         System.Drawing.Color.Red};
-            series1.ChartArea = "ChartArea1";
-            series1.LabelForeColor = System.Drawing.Color.Green;
-            series1.Legend = "Legend1";
-            series1.Name = "V";
-            series2.ChartArea = "ChartArea1";
-            series2.LabelForeColor = System.Drawing.Color.Yellow;
-            series2.Legend = "Legend1";
-            series2.Name = "E";
-            series3.ChartArea = "ChartArea1";
-            series3.LabelForeColor = System.Drawing.Color.Red;
-            series3.Legend = "Legend1";
-            series3.Name = "N";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
+            series7.ChartArea = "ChartArea1";
+            series7.LabelForeColor = System.Drawing.Color.Green;
+            series7.Legend = "Legend1";
+            series7.Name = "V";
+            series8.ChartArea = "ChartArea1";
+            series8.LabelForeColor = System.Drawing.Color.Yellow;
+            series8.Legend = "Legend1";
+            series8.Name = "E";
+            series9.ChartArea = "ChartArea1";
+            series9.LabelForeColor = System.Drawing.Color.Red;
+            series9.Legend = "Legend1";
+            series9.Name = "N";
+            this.chart1.Series.Add(series7);
+            this.chart1.Series.Add(series8);
+            this.chart1.Series.Add(series9);
             this.chart1.Size = new System.Drawing.Size(434, 339);
             this.chart1.TabIndex = 21;
             this.chart1.Text = "chart1";
@@ -420,9 +427,9 @@
         private System.Windows.Forms.ComboBox accountingTypeComboBox;
         private System.Windows.Forms.Label accountingTypeLabel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox NCheckBox;
+        private System.Windows.Forms.CheckBox ECheckBox;
+        private System.Windows.Forms.CheckBox VCheckBox;
         private System.Windows.Forms.CheckBox CCheckBox;
         private System.Windows.Forms.CheckBox BCheckBox;
         private System.Windows.Forms.CheckBox ACheckBox;
