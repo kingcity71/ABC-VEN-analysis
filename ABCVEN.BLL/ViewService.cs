@@ -35,5 +35,11 @@ namespace ABCVEN.BLL
             }
             return result;
         }
+        public (DateTime, DateTime) GetTimeBorders()
+        {
+            var minDate = context.Sales.Select(x => x.Date).Min();
+            var maxDate = context.Sales.Select(x => x.Date).Max();
+            return (minDate, maxDate);
+        }
     }
 }

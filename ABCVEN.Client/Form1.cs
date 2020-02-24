@@ -28,7 +28,7 @@ namespace ABCVEN
         private void SetInitialValues()
         {
             SetComboBoxes();
-
+            SetDatePickerBorders();
             var viewList = viewService.GetSalesViewModels().Select(x => (object)x).ToList();
             SetDataGridView(viewList);
         }
@@ -55,6 +55,12 @@ namespace ABCVEN
             storeComboBox.DataSource = GetComboBoxList(crudService.GetAllStores().ToList());
             finSourceComboBox.DataSource = GetComboBoxList(crudService.GetAllFinSources().ToList());
             producerComboBox.DataSource = GetComboBoxList(crudService.GetAllProducers().ToList());
+        }
+        private void SetDatePickerBorders()
+        {
+            var borders = viewService.GetTimeBorders();
+            dateFromDP.Value = borders.Item1;
+            dateToDP.Value = borders.Item2;
         }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {

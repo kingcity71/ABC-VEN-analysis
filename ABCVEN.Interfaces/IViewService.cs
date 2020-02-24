@@ -10,5 +10,6 @@ namespace ABCVEN.Interfaces
     public interface IViewService
     {
         IEnumerable<SalesViewModel> GetSalesViewModels();
+        (DateTime, DateTime) GetTimeBorders();
     }
 }
