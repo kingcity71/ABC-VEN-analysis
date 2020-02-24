@@ -58,6 +58,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.FilterBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -67,7 +68,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // PurchasesUploadBtn
             // 
@@ -341,6 +341,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.FilterBtn);
             this.groupBox4.Controls.Add(this.dateToDP);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.dateFromDP);
@@ -359,6 +360,16 @@
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Фильтр";
+            // 
+            // FilterBtn
+            // 
+            this.FilterBtn.Location = new System.Drawing.Point(337, 128);
+            this.FilterBtn.Name = "FilterBtn";
+            this.FilterBtn.Size = new System.Drawing.Size(121, 23);
+            this.FilterBtn.TabIndex = 15;
+            this.FilterBtn.Text = "Фильтр";
+            this.FilterBtn.UseVisualStyleBackColor = true;
+            this.FilterBtn.Click += new System.EventHandler(this.FilterBtn_Click);
             // 
             // Form1
             // 
@@ -415,6 +426,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button FilterBtn;
     }
 }
 

@@ -23,7 +23,6 @@ namespace ABCVEN
             this.calculationService = calculationService;
             this.viewService = viewService;
             InitializeComponent();
-
         }
         private void SetInitialValues()
         {
@@ -62,10 +61,6 @@ namespace ABCVEN
             dateFromDP.Value = borders.Item1;
             dateToDP.Value = borders.Item2;
         }
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
         private void PurchasesUploadBtn_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
@@ -86,6 +81,22 @@ namespace ABCVEN
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FilterBtn_Click(object sender, EventArgs e)
+        {   
+            var filterModel = new FilterView()
+            {
+                Store = storeComboBox.SelectedItem.ToString(),
+                FinSource = finSourceComboBox.SelectedItem.ToString(),
+                AccType = accountingTypeComboBox.SelectedItem.ToString(),
+                Producer = producerComboBox.SelectedItem.ToString(),
+                DateFrom = dateFromDP.Value,
+                DateTo = dateToDP.Value
+            };
+
+            var viewModels = viewService.GetFilteredViewModel(filterModel).Select(x => (object)x).ToList();
+            SetDataGridView(viewModels);
         }
     }
 
