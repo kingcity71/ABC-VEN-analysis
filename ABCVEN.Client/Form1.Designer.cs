@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.uploadBtn = new System.Windows.Forms.Button();
+            this.PurchasesUploadBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateFromDP = new System.Windows.Forms.DateTimePicker();
             this.dateToDP = new System.Windows.Forms.DateTimePicker();
-            this.fileStatudLabel = new System.Windows.Forms.Label();
             this.storeLabel = new System.Windows.Forms.Label();
             this.storeComboBox = new System.Windows.Forms.ComboBox();
             this.finSourceComboBox = new System.Windows.Forms.ComboBox();
@@ -45,6 +44,7 @@
             this.accountingTypeComboBox = new System.Windows.Forms.ComboBox();
             this.accountingTypeLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.showDiagramm = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -54,11 +54,11 @@
             this.ACheckBox = new System.Windows.Forms.CheckBox();
             this.MNNCheckBox = new System.Windows.Forms.CheckBox();
             this.TNCheckBox = new System.Windows.Forms.CheckBox();
-            this.showDiagramm = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.DefaultDataRadioButton = new System.Windows.Forms.RadioButton();
-            this.TNRadioButton = new System.Windows.Forms.RadioButton();
             this.MNNRadioButton = new System.Windows.Forms.RadioButton();
+            this.TNRadioButton = new System.Windows.Forms.RadioButton();
+            this.DefaultDataRadioButton = new System.Windows.Forms.RadioButton();
+            this.SalesUploadBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -68,15 +68,15 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // uploadBtn
+            // PurchasesUploadBtn
             // 
-            this.uploadBtn.Location = new System.Drawing.Point(12, 12);
-            this.uploadBtn.Name = "uploadBtn";
-            this.uploadBtn.Size = new System.Drawing.Size(145, 23);
-            this.uploadBtn.TabIndex = 0;
-            this.uploadBtn.Text = "Загрузить данные...";
-            this.uploadBtn.UseVisualStyleBackColor = true;
-            this.uploadBtn.Click += new System.EventHandler(this.button1_Click);
+            this.PurchasesUploadBtn.Location = new System.Drawing.Point(12, 12);
+            this.PurchasesUploadBtn.Name = "PurchasesUploadBtn";
+            this.PurchasesUploadBtn.Size = new System.Drawing.Size(145, 23);
+            this.PurchasesUploadBtn.TabIndex = 0;
+            this.PurchasesUploadBtn.Text = "Загрузить поставки";
+            this.PurchasesUploadBtn.UseVisualStyleBackColor = true;
+            this.PurchasesUploadBtn.Click += new System.EventHandler(this.PurchasesUploadBtn_Click);
             // 
             // button2
             // 
@@ -119,15 +119,6 @@
             this.dateToDP.Name = "dateToDP";
             this.dateToDP.Size = new System.Drawing.Size(125, 20);
             this.dateToDP.TabIndex = 5;
-            // 
-            // fileStatudLabel
-            // 
-            this.fileStatudLabel.AutoSize = true;
-            this.fileStatudLabel.Location = new System.Drawing.Point(188, 17);
-            this.fileStatudLabel.Name = "fileStatudLabel";
-            this.fileStatudLabel.Size = new System.Drawing.Size(102, 13);
-            this.fileStatudLabel.TabIndex = 6;
-            this.fileStatudLabel.Text = "Файл не загружен";
             // 
             // storeLabel
             // 
@@ -216,6 +207,15 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ABC-VEN анализ";
+            // 
+            // showDiagramm
+            // 
+            this.showDiagramm.Location = new System.Drawing.Point(230, 87);
+            this.showDiagramm.Name = "showDiagramm";
+            this.showDiagramm.Size = new System.Drawing.Size(75, 23);
+            this.showDiagramm.TabIndex = 9;
+            this.showDiagramm.Text = "Показать";
+            this.showDiagramm.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -306,15 +306,6 @@
             this.TNCheckBox.Text = "ТН";
             this.TNCheckBox.UseVisualStyleBackColor = true;
             // 
-            // showDiagramm
-            // 
-            this.showDiagramm.Location = new System.Drawing.Point(230, 87);
-            this.showDiagramm.Name = "showDiagramm";
-            this.showDiagramm.Size = new System.Drawing.Size(75, 23);
-            this.showDiagramm.TabIndex = 9;
-            this.showDiagramm.Text = "Показать";
-            this.showDiagramm.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.MNNRadioButton);
@@ -327,16 +318,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Показать";
             // 
-            // DefaultDataRadioButton
+            // MNNRadioButton
             // 
-            this.DefaultDataRadioButton.AutoSize = true;
-            this.DefaultDataRadioButton.Location = new System.Drawing.Point(6, 19);
-            this.DefaultDataRadioButton.Name = "DefaultDataRadioButton";
-            this.DefaultDataRadioButton.Size = new System.Drawing.Size(117, 17);
-            this.DefaultDataRadioButton.TabIndex = 17;
-            this.DefaultDataRadioButton.TabStop = true;
-            this.DefaultDataRadioButton.Text = "Исходные данные";
-            this.DefaultDataRadioButton.UseVisualStyleBackColor = true;
+            this.MNNRadioButton.AutoSize = true;
+            this.MNNRadioButton.Location = new System.Drawing.Point(308, 19);
+            this.MNNRadioButton.Name = "MNNRadioButton";
+            this.MNNRadioButton.Size = new System.Drawing.Size(67, 17);
+            this.MNNRadioButton.TabIndex = 19;
+            this.MNNRadioButton.TabStop = true;
+            this.MNNRadioButton.Text = "По МНН";
+            this.MNNRadioButton.UseVisualStyleBackColor = true;
             // 
             // TNRadioButton
             // 
@@ -349,22 +340,33 @@
             this.TNRadioButton.Text = "По ТН";
             this.TNRadioButton.UseVisualStyleBackColor = true;
             // 
-            // MNNRadioButton
+            // DefaultDataRadioButton
             // 
-            this.MNNRadioButton.AutoSize = true;
-            this.MNNRadioButton.Location = new System.Drawing.Point(308, 19);
-            this.MNNRadioButton.Name = "MNNRadioButton";
-            this.MNNRadioButton.Size = new System.Drawing.Size(67, 17);
-            this.MNNRadioButton.TabIndex = 19;
-            this.MNNRadioButton.TabStop = true;
-            this.MNNRadioButton.Text = "По МНН";
-            this.MNNRadioButton.UseVisualStyleBackColor = true;
+            this.DefaultDataRadioButton.AutoSize = true;
+            this.DefaultDataRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.DefaultDataRadioButton.Name = "DefaultDataRadioButton";
+            this.DefaultDataRadioButton.Size = new System.Drawing.Size(117, 17);
+            this.DefaultDataRadioButton.TabIndex = 17;
+            this.DefaultDataRadioButton.TabStop = true;
+            this.DefaultDataRadioButton.Text = "Исходные данные";
+            this.DefaultDataRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // SalesUploadBtn
+            // 
+            this.SalesUploadBtn.Location = new System.Drawing.Point(201, 12);
+            this.SalesUploadBtn.Name = "SalesUploadBtn";
+            this.SalesUploadBtn.Size = new System.Drawing.Size(145, 23);
+            this.SalesUploadBtn.TabIndex = 17;
+            this.SalesUploadBtn.Text = "Загрузить продажи";
+            this.SalesUploadBtn.UseVisualStyleBackColor = true;
+            this.SalesUploadBtn.Click += new System.EventHandler(this.SalesUploadBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 314);
+            this.Controls.Add(this.SalesUploadBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.producerComboBox);
@@ -375,13 +377,12 @@
             this.Controls.Add(this.finSourceLabel);
             this.Controls.Add(this.storeComboBox);
             this.Controls.Add(this.storeLabel);
-            this.Controls.Add(this.fileStatudLabel);
             this.Controls.Add(this.dateToDP);
             this.Controls.Add(this.dateFromDP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.uploadBtn);
+            this.Controls.Add(this.PurchasesUploadBtn);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -397,13 +398,12 @@
         #endregion
 
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button uploadBtn;
+        private System.Windows.Forms.Button PurchasesUploadBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateFromDP;
         private System.Windows.Forms.DateTimePicker dateToDP;
-        private System.Windows.Forms.Label fileStatudLabel;
         private System.Windows.Forms.Label storeLabel;
         private System.Windows.Forms.ComboBox storeComboBox;
         private System.Windows.Forms.ComboBox finSourceComboBox;
@@ -427,6 +427,7 @@
         private System.Windows.Forms.RadioButton MNNRadioButton;
         private System.Windows.Forms.RadioButton TNRadioButton;
         private System.Windows.Forms.RadioButton DefaultDataRadioButton;
+        private System.Windows.Forms.Button SalesUploadBtn;
     }
 }
 

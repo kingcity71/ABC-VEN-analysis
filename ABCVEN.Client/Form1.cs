@@ -42,15 +42,23 @@ namespace ABCVEN
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PurchasesUploadBtn_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
             var fileName = openFileDialog1.FileName;
-            var file = fileUploadService.ReadFile(fileName);
-            //var fileText = System.IO.File.ReadAllText(fileName);
-           // var list = ReadExcel(fileName);
+            var data = fileUploadService.ReadFile(fileName);
+            crudService.SetPurchases(data);
+            MessageBox.Show("Данные успешно загружены");
+            
         }
-
+        private void SalesUploadBtn_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            var fileName = openFileDialog1.FileName;
+            var data = fileUploadService.ReadFile(fileName);
+            crudService.SetSales(data);
+            MessageBox.Show("Данные успешно загружены");
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             var app = new Excel.Application();
@@ -77,13 +85,13 @@ namespace ABCVEN
                 cell.Validation.IgnoreBlank = true;
                 cell.Validation.InCellDropdown = true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                
+
             }
             workbook.SaveAs("123.xlsx");
         }
 
-        
+
     }
 }

@@ -12,5 +12,7 @@ namespace ABCVEN.Interfaces
         IEnumerable<string> GetAllFinSources();
         IEnumerable<string> GetAllAccountingTypes();
         IEnumerable<string> GetAllStores();
+        void SetSales(string[,] data);
+        void SetPurchases(string[,] data);
     }
 }
