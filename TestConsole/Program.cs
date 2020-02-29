@@ -171,7 +171,6 @@ namespace TestConsole
                     Sum = 360
                 });
 
-
                 context.SaveChanges();
             }
         }
