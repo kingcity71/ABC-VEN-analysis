@@ -9,6 +9,6 @@ namespace ABCVEN.Interfaces
 {
     public interface ICalculationService
     {
-        (ABCGroupModel, ABCGroupModel, ABCGroupModel) GetABC();
+        (ABCGroupModel, ABCGroupModel, ABCGroupModel) GetABC(FilterView filter);
     }
 }

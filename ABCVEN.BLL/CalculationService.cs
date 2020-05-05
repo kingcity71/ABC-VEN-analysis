@@ -18,12 +18,12 @@ namespace ABCVEN.BLL
         {
             this.context = context;
         }
-        public (ABCGroupModel, ABCGroupModel, ABCGroupModel) GetABC()
+        public (ABCGroupModel, ABCGroupModel, ABCGroupModel) GetABC(FilterView filter)
         {
             double GetPercentageOfTotal(List<ABCUnitModel> models, List<SalesViewModel> sales)
                 => models.Count() != 0 ? (double)(sales.Count()) / models.Count : 0;
             
-            var medicineSales = GetSalesViewModels()
+            var medicineSales = GetSalesViewModels(filter)
                 .OrderByDescending(x=>x.SalesSum).ToList();
 
             var salesSum = medicineSales.Sum(x => x.SalesSum);
@@ -54,25 +54,45 @@ namespace ABCVEN.BLL
 
             return (A, B, C);
         }
-        private IEnumerable<SalesViewModel> GetSalesViewModels()
+        private IEnumerable<SalesViewModel> GetSalesViewModels(FilterView filter)
         {
-            var sales = context.Sales.ToList();
+            var sales = GetFiltred(filter);
             var medicines = context.Medicines.ToList();
             var result = new List<SalesViewModel>();
             foreach (var medicine in medicines)
             {
-                var medicineSales = sales.Where(x => x.MedicineId == medicine.Id).ToList();
-                var count = medicineSales.Sum(x => x.Count);
-                var sum = medicineSales.Sum(x => x.Sum);
-                result.Add(new SalesViewModel()
+                if (filter.AccType.ToLower() == "Все".ToLower() || medicine.AccountingType.ToLower() == filter.AccType.ToLower())
                 {
-                    MedicineName = medicine.TradeName,
-                    SalesCount = count,
-                    SalesSum = sum,
-                    VEN = medicine.VEN
-                });
+                    var medicineSales = sales.Where(x => x.MedicineId == medicine.Id).ToList();
+                    var count = medicineSales.Sum(x => x.Count);
+                    var sum = (int)medicineSales.Sum(x => x.Sum);
+                    result.Add(new SalesViewModel()
+                    {
+                        MedicineName = medicine.TradeName,
+                        SalesCount = count,
+                        SalesSum = sum,
+                        VEN = medicine.VEN
+                    });
+                }
             }
             return result;
+        }
+
+        private IEnumerable<Purchase> GetFiltred(FilterView filter)
+        {
+            var purchases = context.Purchases
+                .Where(x=>x.Date>=filter.DateFrom && x.Date<=filter.DateTo)
+                .ToList();
+            if ((filter.FinSource)!="Все")
+                purchases = purchases
+                    .Where(x => x.FinanceSource.ToLower() == filter.FinSource.ToLower()).ToList();
+            if((filter.Producer) != "Все")
+                purchases = purchases
+                    .Where(x => x.Producer.ToLower() == filter.Producer.ToLower()).ToList();
+            if ((filter.Store) != "Все")
+                purchases = purchases
+                    .Where(x => x.Store.ToLower() == filter.Store.ToLower()).ToList();
+            return purchases;
         }
     }
 }

@@ -12,6 +12,6 @@ namespace ABCVEN.Interfaces
         IEnumerable<SalesViewModel> GetSalesViewModels();
         (DateTime, DateTime) GetTimeBorders();
         IEnumerable<SalesViewModel> GetFilteredViewModel(FilterView filterView);
-        DiagrammViewModel GetDiagrammModel(DiagrammViewModel diagrammViewModel);
+        DiagrammViewModel GetDiagrammModel(DiagrammViewModel diagrammViewModel, FilterView filter);
     }
 }

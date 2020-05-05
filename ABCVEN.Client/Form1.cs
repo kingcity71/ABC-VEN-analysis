@@ -30,7 +30,16 @@ namespace ABCVEN
             SetDatePickerBorders();
             var viewList = viewService.GetSalesViewModels().Select(x => (object)x).ToList();
             SetDataGridView(viewList);
-            var diaMod = viewService.GetDiagrammModel(GetDiagrammFilterModel());
+            var filterModel = new FilterView()
+            {
+                Store = storeComboBox.SelectedItem.ToString(),
+                FinSource = finSourceComboBox.SelectedItem.ToString(),
+                AccType = accountingTypeComboBox.SelectedItem.ToString(),
+                Producer = producerComboBox.SelectedItem.ToString(),
+                DateFrom = dateFromDP.Value,
+                DateTo = dateToDP.Value
+            };
+            var diaMod = viewService.GetDiagrammModel(GetDiagrammFilterModel(), filterModel);
             SetDiagrammData(diaMod);
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -130,11 +139,23 @@ namespace ABCVEN
 
             var viewModels = viewService.GetFilteredViewModel(filterModel).Select(x => (object)x).ToList();
             SetDataGridView(viewModels);
+
+            var diaMod = viewService.GetDiagrammModel(GetDiagrammFilterModel(), filterModel);
+            SetDiagrammData(diaMod);
         }
 
         private void showDiagramm_Click(object sender, EventArgs e)
         {
-            var diaMod = viewService.GetDiagrammModel(GetDiagrammFilterModel());
+            var filterModel = new FilterView()
+            {
+                Store = storeComboBox.SelectedItem.ToString(),
+                FinSource = finSourceComboBox.SelectedItem.ToString(),
+                AccType = accountingTypeComboBox.SelectedItem.ToString(),
+                Producer = producerComboBox.SelectedItem.ToString(),
+                DateFrom = dateFromDP.Value,
+                DateTo = dateToDP.Value
+            };
+            var diaMod = viewService.GetDiagrammModel(GetDiagrammFilterModel(), filterModel);
             SetDiagrammData(diaMod);
         }
     }

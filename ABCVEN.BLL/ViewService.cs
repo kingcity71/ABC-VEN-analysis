@@ -70,9 +70,9 @@ namespace ABCVEN.BLL
             return (minDate, maxDate);
         }
 
-        public DiagrammViewModel GetDiagrammModel(DiagrammViewModel diagrammViewModel)
+        public DiagrammViewModel GetDiagrammModel(DiagrammViewModel diagrammViewModel, FilterView filter)
         {
-            var calculated = calculationService.GetABC();
+            var calculated = calculationService.GetABC(filter);
             var result = new DiagrammViewModel();
 
             result.A = diagrammViewModel.IncludeA ? GetDiagrammViewModel(calculated.Item1, diagrammViewModel) : GetDiagrammUnitModel();
